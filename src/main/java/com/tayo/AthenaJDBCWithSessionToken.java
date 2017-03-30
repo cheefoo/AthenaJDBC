@@ -19,7 +19,7 @@ import java.util.Properties;
 public class AthenaJDBCWithSessionToken
 {
     static final String athenaUrl = "jdbc:awsathena://athena.us-east-1.amazonaws.com:443";
-    private static final String ROLE_ARN = "arn:aws:iam::573906581002:role/AthenaRole";
+    private static final String ROLE_ARN = "arn:aws:iam::1111111111111:role/AthenaRole";
 
     public static void main(String[] args)
     {
@@ -45,8 +45,8 @@ public class AthenaJDBCWithSessionToken
         try {
             Class.forName("com.amazonaws.athena.jdbc.AthenaDriver");
             Properties info = new Properties();
-            info.put("s3_staging_dir", "s3://temitayo/");
-            info.put("log_path", "/Users/temitayo/workspace/AthenaJDBC/log/athenajdbc.log");
+            info.put("s3_staging_dir", "s3://xxxxxxx/");
+            info.put("log_path", "/Users/xxxxxxx/workspace/AthenaJDBC/log/xxxxx.log");
             info.put("aws_credentials_provider_class","com.tayo.CustomSessionCredentialsProvider");
             //info.put("aws_credentials_provider_arguments","credentials");
             String providerArgs = myAccessKey+"," + mySecretKey+"," + myToken;

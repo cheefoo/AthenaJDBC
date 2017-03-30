@@ -18,8 +18,8 @@ public class AthenaJDBCDemo {
         try {
             Class.forName("com.amazonaws.athena.jdbc.AthenaDriver");
             Properties info = new Properties();
-            info.put("s3_staging_dir", "s3://temitayo/");
-            info.put("log_path", "/Users/temitayo/workspace/AthenaJDBC/log/athenajdbc.log");
+            info.put("s3_staging_dir", "s3://xxxx/");
+            info.put("log_path", "/Users/xxxxx/workspace/AthenaJDBC/log/athenajdbc.log");
             /*info.put("aws_credentials_provider_class","com.amazonaws.auth.PropertiesFileCredentialsProvider");
             info.put("aws_credentials_provider_arguments","credentials");*/
             info.put("aws_credentials_provider_class","com.amazonaws.auth.DefaultAWSCredentialsProviderChain");

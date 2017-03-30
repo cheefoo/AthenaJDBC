@@ -23,9 +23,7 @@ import com.amazonaws.services.securitytoken.model.AssumeRoleResult;
  */
 public class KinesisSTSAssumeRole
 {
-    //AmazonKinesisClient kinesis = new AmazonKinesisClient(new ProfileCredentialsProvider()
-    //       .getCredentials()).withRegion(Regions.US_WEST_2);
-    //final static String STREAM_NAME = "amazon-kinesis-analytics-demo-stream";
+
 
     final static String STREAM_NAME = "tayostream";
 
@@ -35,7 +33,7 @@ public class KinesisSTSAssumeRole
 
     public static void main (String [] args) throws IOException
     {
-        
+
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         InputStream input = classLoader.getResourceAsStream("AwsCreds.properties");
 
