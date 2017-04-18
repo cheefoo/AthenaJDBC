@@ -6,7 +6,6 @@ import com.amazonaws.services.securitytoken.AWSSecurityTokenServiceClient;
 import com.amazonaws.services.securitytoken.model.AssumeRoleRequest;
 import com.amazonaws.services.securitytoken.model.AssumeRoleResult;
 
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -23,10 +22,6 @@ public class AthenaJDBCWithSessionToken
 
     public static void main(String[] args)
     {
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        InputStream input = classLoader.getResourceAsStream("AwsCreds.properties");
-
-        //AWSCredentials longTermCredentials = new PropertiesCredentials(input);
 
         AWSCredentials longTermCredentials = new DefaultAWSCredentialsProviderChain().getCredentials();
 
@@ -91,4 +86,4 @@ public class AthenaJDBCWithSessionToken
         System.out.printf("Finished connectivity test.");
     }
 
-}//4695876571
+}
